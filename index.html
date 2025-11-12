@@ -1,1 +1,52 @@
-aaaa
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snake — Proyecto</title>
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>🐍 Snake — Proyecto</h1>
+    <div class="controls">
+      <!-- Puntuación -->
+      <div id="scoreboard">
+        <span>Puntos: </span><strong id="score">0</strong>
+        <span class="spacer">•</span>
+        <span>Récord: </span><strong id="highscore">0</strong>
+      </div>
+
+      <!-- Botones -->
+      <div class="buttons">
+        <button id="startBtn" type="button">Iniciar</button>
+        <button id="pauseBtn" type="button" disabled>Pausar</button>
+        <button id="restartBtn" type="button" disabled>Reiniciar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Tablero -->
+    <section class="board-wrapper">
+      <div id="board" class="board" tabindex="0" aria-label="Tablero del juego">
+        <!-- Se generarán las celdas dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Mensaje de estado -->
+    <section class="messages">
+      <div id="message" class="message" hidden></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Desarrolla la lógica en módulos JS (Juego, Serpiente, Comida).</small>
+  </footer>
+
+  <!-- Punto de entrada JavaScript -->
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
